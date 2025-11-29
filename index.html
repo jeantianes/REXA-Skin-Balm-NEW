@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stellar-X Wireless Headset | Product Details</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom styles and font setup */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+        }
+        /* Custom scrollbar for gallery (optional, for aesthetics) */
+        .thumb-scroll::-webkit-scrollbar {
+            height: 6px;
+        }
+        .thumb-scroll::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="min-h-screen antialiased">
+
+    <!-- Header / Navigation Bar -->
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo - Replace this placeholder URL with your local logo path, e.g., `./logo.png` -->
+            <a href="#" class="text-2xl font-bold tracking-tight text-gray-900 flex items-center">
+                <img src="https://placehold.co/40x40/4f46e5/ffffff?text=LOGO" alt="Company Logo" class="rounded-lg mr-2"
+                     onerror="this.onerror=null; this.src='https://placehold.co/40x40/4f46e5/ffffff?text=Brand'">
+                TechShop
+            </a>
+            <!-- Simple Navigation (Mobile menu hidden for simplicity) -->
+            <nav class="hidden md:flex space-x-6 text-gray-600">
+                <a href="#" class="hover:text-indigo-600 transition duration-150">Shop</a>
+                <a href="#" class="hover:text-indigo-600 transition duration-150">Support</a>
+                <a href="#" class="hover:text-indigo-600 transition duration-150">
+                    <i data-lucide="shopping-cart" class="w-5 h-5 inline-block -mt-1"></i>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Product Section -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+        <div class="bg-white p-6 md:p-10 lg:p-12 rounded-2xl shadow-xl">
+
+            <div class="lg:grid lg:grid-cols-2 lg:gap-16">
+                
+                <!-- Product Image Gallery (Left Side) -->
+                <div class="lg:col-span-1 mb-8 lg:mb-0">
+                    <!-- Main Image Display -->
+                    <div class="relative bg-gray-100 rounded-xl overflow-hidden shadow-lg p-4 mb-4 aspect-[4/3] flex items-center justify-center">
+                        <!-- Replaced main image placeholder to reflect out of stock status -->
+                        <img id="main-product-image" 
+                             src="https://placehold.co/800x600/6b7280/ffffff?text=Out+of+Stock" 
+                             alt="Stellar-X Wireless Headset" 
+                             class="w-full h-full object-contain transition duration-300 ease-in-out transform hover:scale-[1.02] cursor-zoom-in rounded-lg">
+                        <!-- Removed the 'New Arrival' badge since the item is out of stock -->
+                    </div>
+
+                    <!-- Image Thumbnails (Scrollable on mobile) -->
+                    <div class="flex space-x-3 overflow-x-auto thumb-scroll pb-2">
+                        <!-- Thumbnails - Replace these placeholder URLs with your local image paths, e.g., `./thumb1.jpg` -->
+                        <img data-img="https://placehold.co/800x600/6b7280/ffffff?text=Out+of+Stock+1" 
+                             alt="Headset Front" 
+                             class="thumb-img w-20 h-20 rounded-lg object-cover cursor-pointer border-2 border-indigo-600 p-0.5 opacity-100 transition duration-150" 
+                             onclick="changeMainImage(this)">
+                        
+                        <img data-img="https://placehold.co/800x600/6b7280/ffffff?text=Out+of+Stock+2" 
+                             alt="Headset Side" 
+                             class="thumb-img w-20 h-20 rounded-lg object-cover cursor-pointer border-2 border-transparent hover:border-indigo-400 p-0.5 transition duration-150" 
+                             onclick="changeMainImage(this)">
+
+                        <img data-img="https://placehold.co/800x600/6b7280/ffffff?text=Out+of+Stock+3" 
+                             alt="Headset Case" 
+                             class="thumb-img w-20 h-20 rounded-lg object-cover cursor-pointer border-2 border-transparent hover:border-indigo-400 p-0.5 transition duration-150" 
+                             onclick="changeMainImage(this)">
+                        
+                        <img data-img="https://placehold.co/800x600/6b7280/ffffff?text=Out+of+Stock+4" 
+                             alt="Headset Packaging" 
+                             class="thumb-img w-20 h-20 rounded-lg object-cover cursor-pointer border-2 border-transparent hover:border-indigo-400 p-0.5 transition duration-150" 
+                             onclick="changeMainImage(this)">
+                    </div>
+                </div>
+
+                <!-- Product Details and Purchase Options (Right Side) -->
+                <div class="lg:col-span-1">
+                    <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-2">Stellar-X Wireless Headset</h1>
+                    <p class="text-indigo-600 text-xl font-semibold mb-6">Pro Audio for the Digital Age</p>
+
+                    <div class="flex items-baseline mb-6">
+                        <span class="text-4xl font-bold text-gray-900">$249.99</span>
+                        <span class="text-lg text-gray-500 line-through ml-3">$329.99</span>
+                        <span class="ml-4 text-sm font-medium text-red-600 bg-red-100 px-3 py-1 rounded-full">Sale Ended</span>
+                    </div>
+
+                    <!-- Ratings and Status -->
+                    <div class="flex items-center space-x-6 mb-6 pb-6 border-b border-gray-200">
+                        <div class="flex items-center text-yellow-500">
+                            <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+                            <i data-lucide="star-half" class="w-5 h-5 fill-yellow-500"></i>
+                            <span class="text-gray-600 ml-2 text-sm font-medium">(4.7 / 1,200 Reviews)</span>
+                        </div>
+                        <!-- CHANGED: Stock status to Out of Stock -->
+                        <span class="text-gray-500 text-sm font-medium flex items-center">
+                            <i data-lucide="x-octagon" class="w-4 h-4 mr-1"></i>
+                            Out of Stock
+                        </span>
+                    </div>
+
+                    <!-- Product Description -->
+                    <p class="text-gray-700 mb-8 leading-relaxed">
+                        Experience unparalleled sound clarity with the Stellar-X headset. Featuring 40mm Neodymium drivers,
+                        active noise cancellation, and a battery life of up to 50 hours, it is engineered for long sessions
+                        of work, gaming, or pure audio immersion. Lightweight, ergonomic, and built with premium aluminum components.
+                    </p>
+
+                    <!-- Key Features -->
+                    <ul class="list-none space-y-3 text-gray-700 mb-8">
+                        <li class="flex items-start">
+                            <i data-lucide="battery-charging" class="w-5 h-5 text-indigo-500 mr-3 mt-1 shrink-0"></i>
+                            <span>50-Hour Extended Battery Life</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="volume-2" class="w-5 h-5 text-indigo-500 mr-3 mt-1 shrink-0"></i>
+                            <span>Hybrid Active Noise Cancellation (ANC)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="bluetooth" class="w-5 h-5 text-indigo-500 mr-3 mt-1 shrink-0"></i>
+                            <span>Bluetooth 5.3 Low-Latency Connection</span>
+                        </li>
+                    </ul>
+
+                    <!-- Quantity Selector and Action Buttons -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                        <!-- Quantity Selector - Disabled buttons and input -->
+                        <div class="flex items-center border border-gray-300 bg-gray-100 rounded-xl p-1 w-full sm:w-auto justify-between opacity-50 cursor-not-allowed">
+                            <button id="qty-minus" class="p-2 text-gray-600 rounded-l-lg" disabled>
+                                <i data-lucide="minus" class="w-5 h-5"></i>
+                            </button>
+                            <input type="text" id="qty-input" value="0" readonly disabled
+                                   class="w-10 text-center text-lg font-semibold text-gray-900 bg-gray-100 focus:outline-none cursor-not-allowed">
+                            <button id="qty-plus" class="p-2 text-gray-600 rounded-r-lg" disabled>
+                                <i data-lucide="plus" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+
+                        <!-- Action Button - Disabled and styled as out of stock -->
+                        <button id="buy-button" disabled class="flex-1 px-8 py-3 bg-gray-400 text-white text-lg font-semibold rounded-xl shadow-lg transition duration-200 flex items-center justify-center cursor-not-allowed">
+                            <i data-lucide="shopping-bag" class="w-5 h-5 mr-2"></i>
+                            Out of Stock
+                        </button>
+                    </div>
+
+                    <!-- Message/Notification Box -->
+                    <div id="message" class="mt-6 p-3 bg-red-50 text-red-700 border-l-4 border-red-500 rounded-lg hidden font-medium" role="alert">
+                        <!-- Message will appear here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-12 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-400">
+            &copy; 2025 TechShop Inc. All rights reserved.
+            <p class="mt-2">Note: To use your own images, replace the `https://placehold.co/...` URLs in the HTML with your file paths (e.g., `./product1.jpg`).</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        // Initialize lucide icons
+        lucide.createIcons();
+
+        // --- Image Gallery Logic ---
+        function changeMainImage(thumbnail) {
+            const mainImage = document.getElementById('main-product-image');
+            const newSrc = thumbnail.getAttribute('data-img');
+
+            // Update main image source
+            mainImage.src = newSrc;
+            
+            // Update active thumbnail border
+            document.querySelectorAll('.thumb-img').forEach(img => {
+                img.classList.remove('border-indigo-600', 'opacity-100');
+                img.classList.add('border-transparent');
+                img.classList.add('hover:border-indigo-400');
+            });
+
+            thumbnail.classList.add('border-indigo-600', 'opacity-100');
+            thumbnail.classList.remove('border-transparent');
+        }
+
+        // Set initial active thumbnail on load
+        document.addEventListener('DOMContentLoaded', () => {
+            const initialThumb = document.querySelector('.thumb-img');
+            if (initialThumb) {
+                // Manually set the border for the first image
+                initialThumb.classList.add('border-indigo-600', 'opacity-100');
+                initialThumb.classList.remove('border-transparent');
+            }
+        });
+
+
+        // --- Quantity Selector Logic ---
+        const qtyInput = document.getElementById('qty-input');
+        const qtyPlus = document.getElementById('qty-plus');
+        const qtyMinus = document.getElementById('qty-minus');
+
+        function updateQuantity(delta) {
+            // Since the button is disabled, this code will typically not run. 
+            // However, if the 'disabled' attribute were removed, this logic would keep the quantity updated.
+            let currentQty = parseInt(qtyInput.value);
+            let newQty = currentQty + delta;
+            
+            // Set limits
+            if (newQty < 1) newQty = 1; // Minimum 1
+            if (newQty > 10) newQty = 10; // Maximum 10 (arbitrary limit)
+
+            qtyInput.value = newQty;
+            
+            // Disable/enable minus button based on quantity
+            qtyMinus.disabled = newQty === 1;
+        }
+
+        // The listeners are kept but they will be ineffective while the buttons have the 'disabled' attribute.
+        qtyPlus.addEventListener('click', () => updateQuantity(1));
+        qtyMinus.addEventListener('click', () => updateQuantity(-1));
+
+        // --- Buy Button / Action Logic ---
+        const buyButton = document.getElementById('buy-button');
+        const messageBox = document.getElementById('message');
+
+        buyButton.addEventListener('click', () => {
+            // Since the button is disabled in the HTML, this click event won't fire.
+            // If it were to be made available again, the message below would show.
+            messageBox.innerHTML = `<i data-lucide="alert-triangle" class="w-5 h-5 inline-block mr-2"></i> Sorry, this item is currently <strong>Out of Stock</strong>. Please check back later!`;
+            messageBox.classList.remove('hidden');
+            lucide.createIcons();
+            
+            setTimeout(() => {
+                messageBox.classList.add('hidden');
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
